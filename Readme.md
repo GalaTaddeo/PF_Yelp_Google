@@ -35,13 +35,13 @@
 
 ## Introducción
 
-El mercado de atención holística en el estado de Florida , Estados Unidos, ha llamado la atención de 'Active Life Strategies', una firma de inversiones en busca de oportunidades estratégicas. Reconociendo la importancia de entender a fondo este sector en evolución, han confiado en los servicios especializados de 'SmartResolve Analytics', una firma consultora reconocida por su experiencia en análisis de mercado. En colaboración, se ha llevado a cabo un minucioso estudio del paisaje holístico en los Estados Unidos, utilizando datos de plataformas como Yelp y Google Maps.
+El mercado de atención holística en el estado de Florida, Estados Unidos, ha llamado la atención de **'Active Life Strategies'**, una firma de inversiones en busca de oportunidades estratégicas. Reconociendo la importancia de entender a fondo este sector en evolución, han confiado en los servicios especializados de **'SmartResolve Analytics'**, una firma consultora reconocida por su experiencia en análisis de mercado. En colaboración, se ha llevado a cabo un minucioso estudio del paisaje holístico en los Estados Unidos, utilizando datos de plataformas como Yelp y Google Maps.
 
 El propósito de esta colaboración es proporcionar una perspectiva informada y datos sólidos que respalden las decisiones de inversión. A través de un análisis detallado, no solo se busca minimizar riesgos, sino también identificar oportunidades prometedoras para garantizar el éxito en el dinámico sector de la salud en los Estados Unidos.
 
 ## Sobre Nosotros
 
-SmartResolve Analytics es una firma consultora que se especializa en el análisis empresarial, destacándose por su enfoque innovador en el uso de la ciencia de datos para impulsar el éxito de las empresas. Nuestro equipo está compuesto por expertos científicos de datos con amplia experiencia en diversos sectores. Nos dedicamos a transformar datos en información valiosa que guía decisiones estratégicas y ofrece una ventaja competitiva en el mercado. Nos distinguimos por nuestra capacidad para ofrecer soluciones personalizadas, adaptadas a las necesidades específicas de cada cliente. Trabajamos en estrecha colaboración con nuestros clientes para comprender sus metas y desafíos, aplicando técnicas avanzadas de análisis de datos para proporcionar información relevante y práctica.
+**SmartResolve Analytics** es una firma consultora que se especializa en el análisis empresarial, destacándose por su enfoque innovador en el uso de la ciencia de datos para impulsar el éxito de las empresas. Nuestro equipo está compuesto por expertos científicos de datos con amplia experiencia en diversos sectores. Nos dedicamos a transformar datos en información valiosa que guía decisiones estratégicas y ofrece una ventaja competitiva en el mercado. Nos distinguimos por nuestra capacidad para ofrecer soluciones personalizadas, adaptadas a las necesidades específicas de cada cliente. Trabajamos en estrecha colaboración con nuestros clientes para comprender sus metas y desafíos, aplicando técnicas avanzadas de análisis de datos para proporcionar información relevante y práctica.
 
 ## Equipo de trabajo
 
@@ -55,7 +55,7 @@ SmartResolve Analytics es una firma consultora que se especializa en el análisi
 
 El principal objetivo de esta alianza radica en asegurar una inversión exitosa, fundamentada en un análisis exhaustivo de las percepciones de los clientes en las plataformas Yelp y Google. Específicamente enfocada en el segmento de negocios centrados en el bienestar y la vida saludable en Florida, Estados Unidos, nuestra meta es proporcionar a estos empresarios una evaluación meticulosa del mercado holístico.
 
-El dinámico sector de la salud en Estados Unidos se distingue por su diversidad y vitalidad, reflejando una amplia gama de preferencias y estilos de vida. La colaboración estratégica con SmartResolve Analytics representa una oportunidad única para no solo evaluar la viabilidad financiera, sino también comprender a fondo la compleja interacción de factores sociales, las tendencias emergentes y las preferencias del consumidor en esta región. Este proyecto tiene como objetivo principal alcanzar el éxito económico, al mismo tiempo que busca consolidarse como un referente en la prestación de servicios de alta calidad en el ámbito holístico.
+El dinámico sector de la salud en Estados Unidos se distingue por su diversidad y vitalidad, reflejando una amplia gama de preferencias y estilos de vida. La colaboración estratégica con SmartResolve Analytics representa una oportunidad única para no solo evaluar la viabilidad financiera, sino también comprender a fondo la compleja interacción de factores sociales, las tendencias emergentes y las preferencias del consumidor en esta región. con este proyecto nuestro cliente tiene como objetivo principal alcanzar el éxito económico, al mismo tiempo que busca consolidarse como un referente en la prestación de servicios de alta calidad en el ámbito holístico.
 
 ## Alcance
 
@@ -95,20 +95,29 @@ La elección de centrar el proyecto en el estado de Florida, Estados Unidos, se 
 
 ## Stack tecnológico
 
-Alojamiento del repositorio y control de versiones con Github. Esta plataforma facilita la colaboración entre miembros del equipo, permitiendo la revisión de código, la gestión de problemas y el seguimiento de cambios, asegurando un flujo de trabajo fluido y una integración continua efectiva.
+* Alojamiento del repositorio y control de versiones con **Github**. Esta plataforma facilita la colaboración entre miembros del equipo, permitiendo la revisión de código, la gestión de problemas y el seguimiento de cambios, asegurando un flujo de trabajo fluido y una integración continua efectiva.
 
-Control del flujo de tareas y cronograma con Jira Software. Es una herramienta de gestión de proyectos ágiles muy utilizada, altamente personalizable y adaptable a las necesidades de cada proyecto.
+* Control del flujo de tareas y cronograma con **Jira Software**. Es una herramienta de gestión de proyectos ágiles muy utilizada, altamente personalizable y adaptable a las necesidades de cada proyecto.
 
-Extracción, exploración y transformación de datos con Python; es nuestro lenguaje de programación elegido debido a su simplicidad, versatilidad y por ser una herramienta poderosa para el análisis y la manipulación de datos. Usamos Visual Studio Code de forma local y Google Colab para trabajar de manera colaborativa en línea.
+* Extracción, exploración y transformación de datos con **Python**; es nuestro lenguaje de programación elegido debido a su simplicidad, versatilidad y por ser una herramienta poderosa para el análisis y la manipulación de datos. Usamos **Visual Studio Code** de forma local y **Google Colab** para trabajar de manera colaborativa en línea.
 
-Herramientas de trabajo en la nube de Google Cloud Products. Elegimos trabajar con Google Cloud por ser una plataforma de computación en la nube que comprende una amplia gama de servicios de infraestructura y aplicaciones. Ofrece, de manera integrada, una gran variedad de herramientas para cubrir las diferentes necesidades de nuestro proyecto: almacenamiento, procesamiento y ejecución de código, creación de un Data Warehouse con carga incremental, programación de tareas en la nube, Análisis de Datos, Machine Learning, geolocalización. Existe suficiente documentación de sus herramientas para resolver las dudas sobre su funcionamiento y es una buena opción en términos de costos de operación. Entre las herramientas que utilizaremos están:
+* Herramientas de trabajo en la nube de **Google Cloud Products**. Elegimos trabajar con Google Cloud por ser una plataforma de computación en la nube que comprende una amplia gama de servicios de infraestructura y aplicaciones. Ofrece, de manera integrada, una gran variedad de herramientas para cubrir las diferentes necesidades de nuestro proyecto: almacenamiento, procesamiento y ejecución de código, creación de un Data Warehouse con carga incremental, programación de tareas en la nube, Análisis de Datos, Machine Learning, geolocalización. Existe suficiente documentación de sus herramientas para resolver las dudas sobre su funcionamiento y es una buena opción en términos de costos de operación. Entre las herramientas que utilizaremos están:
 
-Almacenamiento de datos con Google Cloud Storage.
-Análisis de datos en la nube con Big Query y Google Cloud Functions
-Programación y automatización de tareas en la nube con Google Scheduler
-Modelos de Machine Learning con Scikit learn y/o Tensorflow.
+    - Almacenamiento de datos con **Google Cloud Storage**.
+    - Análisis de datos en la nube con **Big Query** y **Google Cloud Functions**
+    - Programación y automatización de tareas en la nube con **Google Scheduler**
 
-Análisis y visualización interactiva de los datos con PowerBI
+* Modelos de Machine Learning con Scikit learn y/o Tensorflow.
+
+* Análisis y visualización interactiva de los datos con PowerBI
+
+## Metodología de trabajo
+
+Para llevar a cabo este proyecto, optaremos por la metodología Scrum, conocida por su alta eficacia en entornos dinámicos y colaborativos. Scrum se caracteriza por su enfoque iterativo e incremental, descomponiendo el proyecto en sprints manejables que culminan con entregables concretos al final de cada iteración. Esta estrategia no solo posibilita la entrega temprana de valor, sino que también simplifica la adaptabilidad a medida que los requisitos van evolucionando.
+
+<p align='center'>
+<img src="src/planeacion.png">
+</p>
 
 ## Pipeline general
 
