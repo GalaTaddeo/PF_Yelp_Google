@@ -47,6 +47,10 @@ El propósito de esta colaboración es proporcionar una perspectiva informada y 
 
 ## Equipo de trabajo
 
+<p align='center'>
+<img src="src/equipo.png">
+</p>
+
 - [Alan Sebastián García](https://www.linkedin.com/in/alanseb92/), Data Scientist
 - [Ana Paulina Maya Zuluaga](https://www.linkedin.com/in/ana-paulina-maya-zuluaga/), Data Analytics
 - [Gala Taddeo Giménez](https://www.linkedin.com/in/galataddeo/), Data Analytics
@@ -116,7 +120,7 @@ La elección de centrar el proyecto en el estado de Florida, Estados Unidos, se 
 ## Pipeline general
 
 <p align='center'>
-<img src="src/2.png">
+<img src="src/pipeline2.png">
 </p>
 
 ## Modelo Machine Learning
