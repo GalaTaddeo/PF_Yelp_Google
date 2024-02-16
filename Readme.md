@@ -183,6 +183,12 @@ Tenemos 5 grupos de datos provenientes de Yelp: Businees, Checkin, Review, Tip y
 <img src="src/nubePalabras.jpeg">
 </p>
 
+## Diagrama Entidad - Relación (DER)
+
+<p align='center'>
+<img src="src/DER.png">
+</p>
+
 ## Data Warehouse - Flujo de Trabajo
 
 Es momento de subir nuestros datos a Cloud y aplicar sobre ellos los procedimientos de ETL con las herramientas de Google Cloud, para almacenar las tablas con los datos listos y disponibles en un DataWarehouse construido en Big Query.
