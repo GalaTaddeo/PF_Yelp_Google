@@ -214,6 +214,28 @@ El Procesamiento Natural del Lenguaje (NLP) es una rama de la inteligencia artif
 <img src="src/1.png">
 </p>
 
+## Analisis de Datos - Dashboard Interactivo
+
+Una de las mejores herramientas para presentar el análisis de los datos a los clientes son los dashboards interactivos. Nosotros construimos el nuestro utilizando Looker Studio, herramienta elegida por su facilidad de uso y versatilidad pero sobre todo porque puede tomar los datos directamente de BigQuery que es donde tenemos almacenado nuestro DataWarehouse.
+
+Acceso a la visualización del [Dashboard en este enlace](https://lookerstudio.google.com/reporting/09e63482-2934-40ea-9543-a0e05d157b67)
+
+<p align='center'>
+<img src="src/Dashboard.gif">
+</p>
+
+## Conclusiones del análisis
+
+- Las cinco ciudades de Florida con mayor presencia de este tipo de negocios son: Miami, Orlando, Tampa, Jacksonville y Boca Ratón. Esto puede sugerir que hay una buena cantidad de  personas deseosas de este tipo de ofertas, aunque habría que tener cuidado de no estar entrando a un mercado saturado. También nos muestra que vale la pena explorar las demás ciudades, las cuales pueden ser terreno fértil para llegar con propuestas novedosas.
+- En total encontramos 14.323 negocios que, entre sus categorías, tenían una o varias que coincidían con el listado de categorías que preparamos y que describen actividades, productos y servicios encaminadas a promover el bienestar y la salud holística.
+- Esta cantidad de negocios corresponde al 5.2% del total de negocios registrados en nuestro dataset, lo cual indica una fracción muy pequeña del mercado y una clara oportunidad de crecimiento.
+- El tipo de negocio con mayor presencia de manera generalizada, en todas las ciudades de Florida, son los negocios que ofrecen terapias, como Masajes, Medicina China, Acupuntura, Spa, Terapia física, etc. Estos abarcan el 66% del total de negocios identificados dentro de nuestro rubro. le siguen los negocios de Actividad física con un 17.2%, los restaurantes o negocios que venden comida con 13.4% y por último las tiendas que ofrecen productos con un 3.4%
+- Viendo lo anterior podríamos decir que los negocios que deseen proponer una oferta novedosa deberían evitar el rubro de terapias alternativas y mas bien explorar el mercado de alimentos y productos y los lugares de actividad física, que tienen una presencia menor.
+- A partir del análisis de los reviews (reseñas) encontramos un total de 792.128 usuarios que escriben reseñas,  y más de dos millones de reseñas.
+- La gran mayoría de las calificaciones dadas por los usuarios tienen un valor de 5 que es la máxima puntuación. De igual manera son muy pocos los casos que reciben las puntuaciones más bajas.
+- En contraste, el análisis de sentimiento de las reseñas escritas da casi un mismo porcentaje de reseñas positivas y neutras. Eso sí, el bajo porcentaje de reseñas negativas se mantiene.
+- Al hacer un análisis diferenciado entre nuestros cuatro grupos de negocios, no encontramos ninguna variación drástica entre estas proporciones.
+
 ## Metodología de trabajo
 
 Para llevar a cabo este proyecto, optaremos por la metodología Scrum, conocida por su alta eficacia en entornos dinámicos y colaborativos. Scrum se caracteriza por su enfoque iterativo e incremental, descomponiendo el proyecto en sprints manejables que culminan con entregables concretos al final de cada iteración. Esta estrategia no solo posibilita la entrega temprana de valor, sino que también simplifica la adaptabilidad a medida que los requisitos van evolucionando.
@@ -221,3 +243,16 @@ Para llevar a cabo este proyecto, optaremos por la metodología Scrum, conocida 
 <p align='center'>
 <img src="src/planeacion.png">
 </p>
+
+## Indice de archivos del repositorio
+
+
+## Fuentes de datos
+
+Consigna general para proyecto Final - [Enlace](https://github.com/soyHenry/PF_DS/tree/FULL-TIME)
+Consigna del proyecto elegido [Google - Yelp](https://github.com/soyHenry/PF_DS/blob/FULL-TIME/Proyectos/yelp-goople.md)
+Fuentes de Datos: [Google Maps](https://drive.google.com/drive/folders/1Wf7YkxA0aHI3GpoHc9Nh8_scf5BbD4DA) - [Yelp](https://drive.google.com/drive/folders/1TI-SsMnZsNP6t930olEEWbBQdo_yuIZF)
+
+## Disclaimer
+
+Este proyecto constituye una práctica académica y de desarrollo de habilidades. Los datos, técnicas de análisis, así como los resultados o conclusiones presentados, son totalmente ficticios y no deben considerarse como representativos de la realidad. No se busca otorgar a este proyecto aplicaciones prácticas o comerciales en un entorno real, siendo su único propósito la demostración de conocimientos y habilidades en el ámbito de la ciencia de datos y análisis de datos. Cualquier referencia a marcas, nombres de empresas o servicios se emplea únicamente con propósitos ilustrativos y no implica ninguna conexión real con las entidades mencionadas.
