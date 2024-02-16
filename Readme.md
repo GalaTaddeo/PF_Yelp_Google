@@ -183,9 +183,22 @@ Tenemos 5 grupos de datos provenientes de Yelp: Businees, Checkin, Review, Tip y
 <img src="src/nubePalabras.jpeg">
 </p>
 
-## DatWarehouse - Flujo de Trabajo
+## Data Warehouse - Flujo de Trabajo
 
+Es momento de subir nuestros datos a Cloud y aplicar sobre ellos los procedimientos de ETL con las herramientas de Google Cloud, para almacenar las tablas con los datos listos y disponibles en un DataWarehouse construido en Big Query.
 
+<p align='center'>
+<img src="src/pipelineGCP.png">
+</p>
+
+- El primer paso es capturar los datos que se extraen desde un Drive. Estas son las tablas originales, que vienen en diferentes formatos: .json. ,pkl, .parquet.
+- Carga incremental automatizada: Se utiliza la herramienta Google Functions para implementar una función que detecta la llegada de un archivo nuevo a la fuente de datos (Drive), reconoce el patrón y lo carga en una tabla en Data Storage.
+- Si no reconoce la estructura del archivo recién llegado, la función puede crear una tabla nueva infiriendo el schema en base a lo que recibe, para almacenar los nuevos datos.
+- Se realizan de nuevo, ahora con Google Functions, los procesos de ETL que se habían probado primero de manera local, para dejar listos los datos, disponibles para ser analizados, almacenados en BigQuery.
+
+<p align='center'>
+<img src="src/ETL_GCP.png">
+</p>
 
 ## Modelo Machine Learning
 
