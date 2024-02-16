@@ -29,6 +29,7 @@
     <li><a href="#Indicadores-Clave---KPIs">KPIs</a></li>
     <li><a href="#Stack tecnológico">Stack tecnológico</a></li>
     <li><a href="#Pipeline general">Pipeline general</a></li>
+    <li><a href="#ETL y EDA">ETL y EDA</a></li>
     <li><a href="#Modelo Machine Learning">Modelo ML</a></li>
     <li><a href="#Metodología de trabajo">Metodología de trabajo</a></li>
   </ol>
@@ -107,7 +108,7 @@ La elección de centrar el proyecto en el estado de Florida, Estados Unidos, se 
 
 * Extracción, exploración y transformación de datos con **Python**; es nuestro lenguaje de programación elegido debido a su simplicidad, versatilidad y por ser una herramienta poderosa para el análisis y la manipulación de datos. Usamos **Visual Studio Code** de forma local y **Google Colab** para trabajar de manera colaborativa en línea.
 
-* Herramientas de trabajo en la nube de **Google Cloud Products**. Elegimos trabajar con Google Cloud por ser una plataforma de computación en la nube que comprende una amplia gama de servicios de infraestructura y aplicaciones. Ofrece, de manera integrada, una gran variedad de herramientas para cubrir las diferentes necesidades de nuestro proyecto: almacenamiento, procesamiento y ejecución de código, creación de un Data Warehouse con carga incremental, programación de tareas en la nube, Análisis de Datos, Machine Learning, geolocalización. Existe suficiente documentación de sus herramientas para resolver las dudas sobre su funcionamiento y es una buena opción en términos de costos de operación. Entre las herramientas que utilizaremos están:
+* Herramientas de trabajo en la nube de **Google Cloud Products**. Elegimos trabajar con Google Cloud por ser una plataforma de computación en la nube que comprende una amplia gama de servicios de infraestructura y aplicaciones. Ofrece, de manera integrada, una gran variedad de herramientas para cubrir las diferentes necesidades de nuestro proyecto: almacenamiento, procesamiento y ejecución de código, creación de un Data Warehouse con carga incremental, programación de tareas en la nube, Análisis de Datos, Machine Learning, geolocalización. Existe suficiente documentación de sus herramientas para resolver las dudas sobre su funcionamiento y es una buena opción en términos de costos de operación. Entre las herramientas que utilizamos están:
 
     - Almacenamiento de datos con **Google Cloud Storage**.
     - Análisis de datos en la nube con **Big Query** y **Google Cloud Functions**
@@ -115,13 +116,76 @@ La elección de centrar el proyecto en el estado de Florida, Estados Unidos, se 
 
 * Modelos de Machine Learning con Scikit learn y/o Tensorflow.
 
-* Análisis y visualización interactiva de los datos con PowerBI
+* Análisis y visualización interactiva de los datos con Looker Studio.
 
 ## Pipeline general
 
 <p align='center'>
 <img src="src/pipeline2.png">
 </p>
+
+## ETL y EDA
+
+### Revisión inicial de calidad de los datos
+
+Tenemos 2 grupos de datos provenientes de Google Maps: Metadata Sitios y Reviews Estados.
+
+**Reviews:**
+- Los reviews correspondientes a Florida son 2’850.000 datos, De estos el 62.1%  tienen un comentario en la columna text.
+- Text y Rating son los datos más importantes de Reviews.
+- Rating maneja una escala de [1-5].
+- Ambas tablas pueden conectarse mediante “gmap_id”
+
+**Metadatos**
+- La columna category contiene los datos que podemos utilizar para clasificar los negocios.
+- En MISC hay datos sobre los servicios adicionales ofrecidos por los negocios.
+- Algunas de las palabras claves para nuestro rubro: Health, Organic, Gym, Spa, Vegan, etc
+- hay 9.971 valores nulos en category
+- Se usarán Longitude y Latitude para localizar geográficamente los negocios.
+
+Tenemos 5 grupos de datos provenientes de Yelp: Businees, Checkin, Review, Tip y User.
+
+**Business**
+- Encontramos que hay dos columnas con el mismo nombre, pero las columnas de la 15 en adelante se encuentran casi vacías del todo, por lo que decidimos eliminarlas.
+- Tiene un total de 150.346 registros, de los cuales 26.329 corresponden a datos de Florida.
+- Contiene principalmente información sobre los negocios: nombre, dirección, latitud, longitud, estado, estrellas, cantidad de reviews, atributos, categorías.
+- el campo que sirve para unir esta tabla con las otras es business_id.
+
+**Checkin**
+- Contiene únicamente dos columnas:business_id y date. En date encontramos una lista con varias fechas en orden cronológico. Interpretamos que son las fechas en que recibieron clientes en su negocio y usamos este dato para asumir que la fecha del primer checkin nos da información sobre la apertura del negocio.
+
+**Review**
+- Contiene 6.990.280. Es necesario hacer un inner join con la tabla ya filtrada de business para extraer los reviews que corresponden a negocios de Florida. Despues de aplicar los filtros de lugar y categorías nos quedan 235.344 rgistros de reviews.
+- Sus columnas son review_id, user_id, business_id, date, text y stars.
+
+**Tip**
+- Al tener datos muy parecidos a los de Review, pero con menos columnas, decidimos no utilizar esta tabla.
+
+**User**
+- Contiene 2.105.597 registros.
+- Tiene información sobre los usuarios que dejan reseñas
+- Aunque mucha de la información que contiene tal vez no nos sea útil para el análisis de datos creemos que se puede utilizar para alimentar y entrenar el modelo de machine learning que implementaremos.
+
+### Pasos del ETL
+
+- Tratamiento Avanzado de Datos: Realizar un tratamiento exhaustivo a los datos,  enfocado en la estandarización del  formato de los datos (tipos de datos, nombres de las columnas, etc) facilitando así su manipulación y análisis posterior.
+- Análisis Estadístico Detallado: Realizar un análisis estadístico detallado con el fin de observar el comportamiento de los dato y su valor. Esto incluye la identificación y tratamiento de valores nulos, duplicados, y outliers.
+- Desarrollo de nuevas columnas: Fue necesario unir los valores de latitud y longitud en una sola columna para poder ubicar graficamente los puntos en Looker Studio. Se generó una columna de análsis de sentimiento aplicando un modelo NLTK a la columna text (reviews). De la columna address se extrajeron, en columnas diferentes, la dirección, el estado y la ciudad.
+
+<p align='center'>
+<img src="src/SentimentAnalysis.png">
+</p>
+
+
+- Filtrado de datos: Se realizó un primer filtro para extraer los registos de negocios, usuarios y reviews ubicados en Florida, USA. Luego de revisar las categorías existentes se elaboró una lista con todas las que coinicían con nuestro segmento. Después, esa gran lista se dividió en cuatro grupos: Terapias, Actividad física, Sitios de comida y Tiendas y productos. Con estos grupos de categorías se filtraron los datasets, para quedarnos únicamente con los registros correspondientes a negocios y reseñas que estuvieran dentro de nuestras categorías en el estado de Florida.
+
+<p align='center'>
+<img src="src/nubePalabras.jpeg">
+</p>
+
+## DatWarehouse - Flujo de Trabajo
+
+
 
 ## Modelo Machine Learning
 
