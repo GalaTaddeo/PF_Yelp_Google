@@ -244,13 +244,13 @@ Para llevar a cabo este proyecto, optaremos por la metodología Scrum, conocida 
 <img src="src/planeacion.png">
 </p>
 
-## Indice de archivos del repositorio
-
 
 ## Fuentes de datos
 
 Consigna general para proyecto Final - [Enlace](https://github.com/soyHenry/PF_DS/tree/FULL-TIME)
+
 Consigna del proyecto elegido [Google - Yelp](https://github.com/soyHenry/PF_DS/blob/FULL-TIME/Proyectos/yelp-goople.md)
+
 Fuentes de Datos: [Google Maps](https://drive.google.com/drive/folders/1Wf7YkxA0aHI3GpoHc9Nh8_scf5BbD4DA) - [Yelp](https://drive.google.com/drive/folders/1TI-SsMnZsNP6t930olEEWbBQdo_yuIZF)
 
 ## Disclaimer
